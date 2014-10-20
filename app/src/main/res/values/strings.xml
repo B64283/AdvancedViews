@@ -4,7 +4,7 @@
     <string name="app_name">AdvancedViews</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="order_num">order</string>
+    <string name="order_num">order number %1$d</string>
     <string-array name="GiftsArray">
         <item>Wisdom</item>
         <item>Knowledge</item>

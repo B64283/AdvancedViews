@@ -6,10 +6,6 @@ package com.example.matthewdarke.advancedviews;
 public class Gifts {
 
 
-    // Member variables
-    private int gOrderNumb;
-    private String gName;
-    private String gDescription;
 
 
 
@@ -23,6 +19,10 @@ public class Gifts {
         return gif;
     }
 
+    // Member variables
+    private int gOrderNumb;
+    private String gName;
+    private String gDescription;
 
 
 
@@ -34,8 +34,8 @@ public class Gifts {
         gDescription = "";
     }
 
-    public Gifts(String _name, String _description, int _orderNumb) {
-        gOrderNumb = _orderNumb;
+    public Gifts(String _name, String _description, int _order) {
+        gOrderNumb = _order;
         gName = _name;
         gDescription = _description;
     }

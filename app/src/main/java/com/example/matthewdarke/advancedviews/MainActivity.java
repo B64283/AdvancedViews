@@ -75,7 +75,7 @@ public class MainActivity extends Activity {
     private void setSimpleAdapter() {
 
 // Field identifiers
-        final String name = "Name";
+        final String name = "name";
         final String Reference = "Reference";
         final String order = "order";
 
@@ -123,12 +123,25 @@ public class MainActivity extends Activity {
                 final String item3 = items.get(position).get("order");
 
                 String GiftString = new String(item1 + "  " + item2 + "" + item3);
+                String nameString = new String(item1);
+                String ReferenceString = new String(item2);
+                String orderString = new String(item3);
+
+
 
                 Toast.makeText(getApplicationContext(), GiftString, Toast.LENGTH_LONG).show();
+               //gift_name.setText(nameString);
 
-                gSpinnerDetails.setText(GiftString);
+
+                //gSpinnerDetails.setText(GiftString);
             }
 
+
+            //@Override
+            //public void onNothingClicked(AdapterView<?> parent) {
+
+
+            //}
 
         });
 
@@ -145,6 +158,8 @@ public class MainActivity extends Activity {
                 String GiftString2 = new String(item1 + "  " + item2 + "" + item3);
 
                 Toast.makeText(getApplicationContext(), GiftString2, Toast.LENGTH_LONG).show();
+
+                   //gSpinnerDetails.setText(GiftString2);
             }
 
             @Override
