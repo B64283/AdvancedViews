@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
     private Spinner giftSpinner;
     private ArrayList<Gifts> giftsArrayList;
     private ListView giftsListView;
-     TextView gSpinnerDetails;
+    TextView gSpinnerDetails;
 
 
     @Override
@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
 
 
 
-setSimpleAdapter();
+        setSimpleAdapter();
 
 
     }
@@ -105,12 +105,12 @@ setSimpleAdapter();
         };
 
         // Creating a new SimpleAdapter that maps values to views using our keys and views arrays.
-         SimpleAdapter adapter = new SimpleAdapter(this, items, R.layout.gift_main, keys, views);
+        SimpleAdapter adapter = new SimpleAdapter(this, items, R.layout.gift_main, keys, views);
 
 
         //set adapters to list view and spinner
 
-        giftsListView.setAdapter(new GiftsAdapter(this, giftsArrayList));
+        giftsListView.setAdapter(adapter);
 
 
         giftsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -133,9 +133,9 @@ setSimpleAdapter();
         });
 
         giftSpinner.setAdapter(new GiftsAdapter(this, giftsArrayList));
-        giftSpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        giftSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, final View view, final int position, long id) {
                 //entry.remove(userString);
 
                 final String item1 = items.get(position).get("name");
@@ -147,8 +147,8 @@ setSimpleAdapter();
                 Toast.makeText(getApplicationContext(), GiftString2, Toast.LENGTH_LONG).show();
             }
 
-            //@Override
-            public void onNothingselected(AdapterView<?> parent) {
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
 
             }
